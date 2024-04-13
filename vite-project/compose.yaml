@@ -1,0 +1,10 @@
+services:
+  web:
+    # I change that to server: -> web:
+    build:
+      context: .
+    ports:
+      - 5173:5173
+    volumes:
+      - .:/app
+      - /app/node_modules # this is same as we build manually by using the docker build command.
